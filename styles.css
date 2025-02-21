@@ -17,11 +17,9 @@ header {
     background-color: #ffffff;
 }
 
-
 section {
     padding-bottom: 5rem;
 }
-
 
 .nav-link {
     color: #CB6D43;
@@ -50,14 +48,12 @@ section {
     height: auto;
 }
 
-
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
 }
-
 
 .botao-inicio {
     background-color: var(--laranja-claro);
@@ -66,23 +62,19 @@ section {
     width: 14em;
     height: 3em;
     align-content: center;
-
 }
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
 
-
 #tropicalia {
     position: relative;
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
+    /* Removido as imagens de fundo */
+    background: none;
 }
 
 #tropicalia .container {
@@ -94,7 +86,6 @@ section {
     /* Garante que o conteúdo fica acima das imagens do background */
 }
 
-
 h2 {
     font-family: 'Lemon', serif;
     font-size: 2.5em;
@@ -104,12 +95,11 @@ h2 {
 
 #galeria {
     background-color: #FAF4F4;
-
 }
 
 .fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
+    /* Removido a imagem de fundo */
+    background: none;
 }
 
 #contato {
@@ -117,7 +107,6 @@ h2 {
     background-size: cover;
     padding: 4rem 0;
     /* Espaçamento interno para a seção de contato */
-
 }
 
 .formulario {
@@ -140,6 +129,7 @@ h2 {
 .form-control {
     background-color: #F1EDEF;
 }
+
 .menu-acessibilidade{
     position: fixed;
     top:2rem;
@@ -195,6 +185,7 @@ h2 {
 .alto-contraste #galeria {
     background-color: var(--alto-contraste-fundo);
 }
+
 .alto-contraste .fundo-galeria {
     background: none;
 }
