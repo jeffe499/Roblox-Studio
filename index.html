@@ -12,103 +12,99 @@
 </head>
 
 <body>
-    <header class="p-5">
+    <header>
         <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" class="nav-img" alt="Logo do Roblox Studio" loading="lazy">
-            <ul class="nav mt-5">
+            <img src="img/logo.png" alt="Logo do Roblox Studio" class="nav-img" loading="lazy">
+            <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
             <div id="acessibilidade" class="menu-acessibilidade">
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">Acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alternar o contraste de cores"> <i class="bi bi-shadows"></i></button>
+                <button id="botao-acessibilidade" class="btn btn-primary fw-bold">Acessibilidade</button>
+                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade">
+                    <button id="aumentar-fonte" class="btn btn-primary fw-bold">A+</button>
+                    <button id="diminuir-fonte" class="btn btn-primary fw-bold">A-</button>
+                    <button id="alterna-contraste" class="btn btn-primary fw-bold"><i class="bi bi-shadows"></i></button>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="container my-5">
-
-        <section id="inicio" class="my-5">
+        <section id="inicio">
             <div class="inicio-fundo d-flex justify-content-between align-items-center">
                 <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas ao Roblox Studio</h1>
-                    <img src="img/logo-roblox.png" class="mb-3" width="563" height="278" alt="Logo do Roblox Studio" loading="lazy">
-                    <a href="#tropicalia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero aprender mais!</a>
+                    <h1 class="display-4 text-white">Boas-vindas ao Roblox Studio</h1>
+                    <img src="img/logo-roblox.png" alt="Logo do Roblox Studio" width="563" height="278" loading="lazy">
+                    <a href="#tropicalia" class="btn btn-primary btn-lg">Quero aprender mais!</a>
                 </div>
-                <img src="img/roblox-studio.png" alt="Tela do Roblox Studio" title="Roblox Studio - Plataforma de desenvolvimento" class="img-fluid img-inicio">
-              </div>
+                <img src="img/roblox-studio.png" alt="Tela do Roblox Studio" class="img-fluid">
+            </div>
         </section>
 
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção sobre Roblox Studio">
+        <section id="tropicalia" tabindex="0">
             <div class="container d-flex align-items-center">
                 <div class="col-4 d-flex justify-content-center">
-                    <img src="img/roblox-image.png" class="rounded-pill" width="273" height="331" alt="Imagem do Roblox Studio" loading="lazy">
+                    <img src="img/roblox-image.png" class="rounded-pill" alt="Imagem do Roblox Studio">
                 </div>
                 <div class="col-5">
                     <h2>O que é o Roblox Studio?</h2>
-                    <p>O Roblox Studio é a plataforma onde você pode criar seus próprios jogos no Roblox! Com uma interface simples, você pode usar a linguagem de programação Lua para criar experiências incríveis e interativas para outros jogadores.</p>
+                    <p>O Roblox Studio é a plataforma onde você pode criar seus próprios jogos no Roblox!</p>
                 </div>
             </div>
         </section>
 
-        <section id="galeria" tabindex="0" aria-label="Galeria de imagens Roblox Studio">
-            <h2 class="text-center pt-5">Galeria de Imagens</h2>
+        <section id="galeria">
+            <h2 class="text-center">Galeria de Imagens</h2>
             <div class="container p-3 mt-3 fundo-galeria">
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <img src="img/roblox-1.jpg" class="img-fluid rounded-5" loading="lazy">
-                        <p class="mt-2 text-center">Imagem 1: Um exemplo de um ambiente interativo criado no Roblox Studio.</p>
+                        <p class="text-center">Imagem 1: Exemplo de um ambiente interativo no Roblox Studio.</p>
                     </div>
                     <div class="col-md-4">
                         <img src="img/roblox-2.jpg" class="img-fluid rounded-5" loading="lazy">
-                        <p class="mt-2 text-center">Imagem 2: Uma simulação de jogo de corrida feita com Roblox Studio.</p>
+                        <p class="text-center">Imagem 2: Simulação de jogo de corrida no Roblox Studio.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
+            <div class="container p-5">
                 <div class="col-md-8 col-lg-10 rounded-5 formulario">
-                    <h2 class="mb-3">Entre em contato</h2>
+                    <h2>Entre em contato</h2>
                     <form action="processar_formulario.php" method="POST">
                         <div class="form-group mb-3">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome">
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email">
                         </div>
                         <div class="form-group mb-3">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem"></textarea>
                         </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center p-3 fst-italic">
+    <footer>
         <p>Acesse nossas redes:</p>
         <i class="bi bi-whatsapp"></i>
         <i class="bi bi-instagram"></i>
         <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Jeffe477. Projeto fictício sem fins comerciais.</p>
+        <p>Desenvolvido por Jeffe477. Projeto fictício sem fins comerciais.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
     <script src="script.js"></script>
-  
 </body>
 
 </html>
