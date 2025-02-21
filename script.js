@@ -1,43 +1,48 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
-    const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
- 
-    botaoDeAcessibilidade.addEventListener('click', function (){
-     botaoDeAcessibilidade.classList.toggle('rotacao-botao');
-     opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
- 
-     const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
-     botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
-   
-    })
- 
-     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
-     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
-     
-     const alternaContraste = document.getElementById('alterna-contraste')
- 
-     let tamanhoAtualFonte = 1;
- 
-     aumentaFonteBotao.addEventListener('click', function(){
-         tamanhoAtualFonte += 0.1;
-         document.body.style.fontSize = `${tamanhoAtualFonte}rem`
- 
-     })
- 
-     diminuiFonteBotao.addEventListener('click', function(){
-         tamanhoAtualFonte -= 0.1;
-         document.body.style.fontSize = `${tamanhoAtualFonte}rem`
- 
-     })
- 
-     alternaContraste.addEventListener('click', function(){
-         document.body.classList.toggle('alto-contraste')
-     })
- 
- 
- })
- 
- ScrollReveal().reveal('#inicio', { delay: 500 });
- ScrollReveal().reveal('#tropicalia', { delay: 500 });
- ScrollReveal().reveal('#galeria', { delay: 500 });
- ScrollReveal().reveal('#contato', { delay: 500 });
+// Função para validar os campos do formulário
+function validarFormulario() {
+    // Obtém os valores dos campos
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    // Verifica se o nome foi preenchido
+    if (nome === "") {
+        alert("Por favor, insira seu nome.");
+        return false;
+    }
+
+    // Verifica se o e-mail foi preenchido e é válido
+    if (email === "") {
+        alert("Por favor, insira seu e-mail.");
+        return false;
+    } else if (!validarEmail(email)) {
+        alert("Por favor, insira um e-mail válido.");
+        return false;
+    }
+
+    // Verifica se a mensagem foi preenchida
+    if (mensagem === "") {
+        alert("Por favor, insira uma mensagem.");
+        return false;
+    }
+
+    // Se tudo estiver válido, o formulário pode ser enviado
+    return true;
+}
+
+// Função para validar o formato do e-mail
+function validarEmail(email) {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(email);
+}
+
+// Adiciona o evento de submit ao formulário
+document.getElementById("form-contato").addEventListener("submit", function(event) {
+    // Se a validação falhar, impede o envio do formulário
+    if (!validarFormulario()) {
+        event.preventDefault(); // Impede o envio
+    } else {
+        // Mensagem de sucesso ou erro pode ser exibida antes do envio real.
+        alert("Formulário enviado com sucesso!");
+    }
+});
